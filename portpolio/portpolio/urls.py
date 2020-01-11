@@ -20,5 +20,5 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"), # 빈 url이면, views.py의 home을 불러옴
-    path('blog/<init:blog_id>', views.detail, name='detail')
+    path('blog/<int:blog_id>', views.detail, name='detail')
 ]
